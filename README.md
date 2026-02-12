@@ -15,9 +15,7 @@ The project follows the **Page Object Model (POM)** design pattern for better re
 - **Test Data:** Excel (`.xlsx`) & JSON
 - **IDE:** VS Code
 
-## 📁 Project Strucutre
-
-ParaBank_Python_Playwright_DemoProject/
+## 📁 Project Strucutre - ParaBank_Python_Playwright_DemoProject
 
 **pages** - Page Object classes
 
@@ -33,4 +31,4 @@ ParaBank_Python_Playwright_DemoProject/
 
 **requirements.txt** - Python dependencies
 
-README.md - Project documentation
+**README.md** - Project documentation
