@@ -1,8 +1,9 @@
 #import pytest
 from playwright.sync_api import expect, Page
-#import time
+import allure
+from allureWraper import BasePage
 
-class LoginPage():
+class LoginPage(BasePage):
     def __init__(self, page: Page):
         self.page = page
         self.registerLink_on_LoginPage = page.locator("//a[contains(text(), 'Register')]")
@@ -22,13 +23,14 @@ class LoginPage():
         self.logInBtn = page.locator("input[value='Log In']")
 
 
-
+    #@allure.step("website launch step")
     def launchTheParaBankBrowser(self):
         print("inside launchTheParaBankBrowser fucntion on loginPage")
         self.page.goto("https://parabank.parasoft.com/parabank/index.htm")
         self.page.wait_for_timeout(1000)
         print("browser launched")
 
+   # @allure.step("register link in login section step")
     def clickOnRegisterLink(self):
        # print("inside clickOnRegisterLink function on loginPage ")
         self.registerLink_on_LoginPage.click()
